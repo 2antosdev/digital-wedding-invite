@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boda Sofía & Alejandro · 14.02.2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@200;300;400;500&family=Great+Vibes&display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="assets/css/styles.css"/>
+
+  <style>
+
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     🎭 PANTALLA DE APERTURA
+══════════════════════════════════════════════════ -->
+<div id="cover">
+  <p class="cover-title">Una invitación especial</p>
+
+<div class="env-wrap" id="env-wrap">
+  <div class="env" id="envelope">
+    <div class="env-back">
+    <div class="env-letter">
+      <p class="script">Alejandra Paola &amp; Alexis </p>
+      <p class="sub">11 · JULIO · 2026</p>
+    </div></div>
+    <div class="env-flap"></div>
+    <div class="env-seal">✝</div>
+  </div>
+</div>
+
+  <p class="cover-hint">Toca el sobre para abrir tu invitación</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     🌸 PÉTALOS
+══════════════════════════════════════════════════ -->
+<canvas id="petals-canvas"></canvas>
+
+<!-- ══════════════════════════════════════════════════
+     🎵 AUDIO PLAYER
+══════════════════════════════════════════════════ -->
+<div id="ap">
+  <button id="ap-btn" aria-label="Reproducir/Pausar música" aria-pressed="false">
+    <svg id="ap-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    <svg id="ap-pause" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+  </button>
+  <div class="ap-info">
+    <span class="ap-lbl">Música de fondo</span>
+    <span class="ap-name">Canon in D — Pachelbel</span>
+  </div>
+  <div class="ap-bars off" id="ap-bars" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <audio id="bg-audio" loop preload="none">
+     <source src="assets/audio/Canon%20in%20D%20(Pachelbel's%20Canon)%20-%20Cello%20&%20Piano%20%5BBEST%20WEDDING%20VERSION%5D.mp3" type="audio/mp3"/> 
+  </audio>
+</div>
+
+<!-- ══════════════════════════════════════════════════
+     📜 CONTENIDO PRINCIPAL
+══════════════════════════════════════════════════ -->
+<div id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__frame" aria-hidden="true"><b></b><i></i></div>
+
+    <div class="hero__content">
+      <p class="hero__pre">Con la bendición de Dios y nuestras familias</p>
+      <span class="hero__cross" aria-hidden="true">&#9901;</span>
+      <h1>
+        <span class="hero__names">Alejandra Paola</span>
+        <span class="hero__amp">&amp;</span>
+        <span class="hero__names">Alexis</span>
+      </h1>
+      <div class="h-rule"><i>&#10022;</i></div>
+      <p class="hero__date">Sábado · 11 de Julio · 2026</p>
+      <p class="hero__verse">
+        "Lo que Dios unió, que no lo separe el hombre."<br/>
+        <small style="font-size:.78em;opacity:.7;">— Marcos 10:9</small>
+      </p>
+      <div class="hero__scroll">
+        <span>Descubre más</span>
+        <svg width="14" height="24" viewBox="0 0 14 24" fill="none">
+          <rect x="1" y="1" width="12" height="20" rx="6" stroke="rgba(255,255,255,.3)" stroke-width="1.5"/>
+          <rect x="6" y="4" width="2" height="5" rx="1" fill="rgba(200,162,74,.7)">
+            <animateTransform attributeName="transform" type="translate" values="0,0;0,5;0,0" dur="1.8s" repeatCount="indefinite"/>
+          </rect>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIRA DE IMÁGENES -->
+  <div class="img-strip" role="img" aria-label="Galería de la boda">
+    <div>
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=500&q=75" alt="Novios"/>
+      <div class="is-ov"><span>Un amor eterno</span></div>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&q=75" alt="Anillos"/>
+      <div class="is-ov"><span>Nuestra promesa</span></div>
+    </div>
+    <div>
+      <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500&q=75" alt="Flores"/>
+      <div class="is-ov"><span>Belleza y amor</span></div>
+    </div>
+    <div class="is4">
+      <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=400&q=75" alt="Pareja"/>
+      <div class="is-ov"><span>Para siempre</span></div>
+    </div>
+    <div class="is5">
+      <img src="https://images.unsplash.com/photo-1529636444744-adffc9135a5e?w=500&q=75" alt="Boda"/>
+      <div class="is-ov"><span>Ante el altar</span></div>
+    </div>
+  </div>
+
+  <!-- CONTADOR -->
+  <section class="countdown-section">
+    <div class="countdown-section__bg" aria-hidden="true"></div>
+    <div class="countdown-section__overlay" aria-hidden="true"></div>
+    <div class="countdown-section__inner">
+      <h2 class="cd-title">Faltan…</h2>
+      <p class="cd-sub">Para el día más hermoso de nuestras vidas</p>
+      <div class="cd-grid" id="countdown" aria-live="polite" aria-atomic="false">
+        <div class="cd-unit">
+          <span class="cd-num" id="cd-d">00</span>
+          <span class="cd-lbl">Días</span>
+        </div>
+        <span class="cd-sep" aria-hidden="true">:</span>
+        <div class="cd-unit">
+          <span class="cd-num" id="cd-h">00</span>
+          <span class="cd-lbl">Horas</span>
+        </div>
+        <span class="cd-sep" aria-hidden="true">:</span>
+        <div class="cd-unit">
+          <span class="cd-num" id="cd-m">00</span>
+          <span class="cd-lbl">Minutos</span>
+        </div>
+        <span class="cd-sep" aria-hidden="true">:</span>
+        <div class="cd-unit">
+          <span class="cd-num" id="cd-s">00</span>
+          <span class="cd-lbl">Segundos</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRASES -->
+  <section class="quotes" id="frases">
+    <div class="quotes__hd">
+      <span class="tag">Palabras que nos inspiran</span>
+      <h2>Sobre el amor verdadero</h2>
+    </div>
+    <div class="qc rev">
+      <div class="qc-track">
+        <div class="qslide on"><span class="ico">📖</span>
+          <p class="txt">"El amor es paciente, es bondadoso; el amor no tiene envidia, no es presumido ni orgulloso… Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta."</p>
+          <span class="ref">— 1 Corintios 13:4–7</span>
+        </div>
+        <div class="qslide"><span class="ico">✝</span>
+          <p class="txt">"Por encima de todo, revístanse de amor, que es el vínculo perfecto."</p>
+          <span class="ref">— Colosenses 3:14</span>
+        </div>
+        <div class="qslide"><span class="ico">🕊️</span>
+          <p class="txt">"Yo soy de mi amado, y mi amado es mío."</p>
+          <span class="ref">— Cantar de los Cantares 6:3</span>
+        </div>
+        <div class="qslide"><span class="ico">💛</span>
+          <p class="txt">"Donde tú vayas, yo iré. Tu pueblo será mi pueblo y tu Dios será mi Dios."</p>
+          <span class="ref">— Rut 1:16</span>
+        </div>
+        <div class="qslide"><span class="ico">🌹</span>
+          <p class="txt">"Dos son mejor que uno… porque si cayeren, el uno levantará a su compañero."</p>
+          <span class="ref">— Eclesiastés 4:9–10</span>
+        </div>
+        <div class="qslide"><span class="ico">💫</span>
+          <p class="txt">"El amor verdadero no es otra cosa que el deseo inevitable de ayudar al otro a ser quien es."</p>
+          <span class="ref">— Jorge Luis Borges</span>
+        </div>
+        <div class="qslide"><span class="ico">🌸</span>
+          <p class="txt">"Amarte es encontrar en tu existencia la razón de la mía."</p>
+          <span class="ref">— Proverbio de amor</span>
+        </div>
+      </div>
+      <div class="qc-nav">
+        <button class="qc-arrow" id="qc-prev" aria-label="Anterior">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="qc-dot-wrap" id="qc-dots"></div>
+        <button class="qc-arrow" id="qc-next" aria-label="Siguiente">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLITS — NUESTRA HISTORIA -->
+  <div class="split">
+    <div class="simg">
+      <img src="https://images.unsplash.com/photo-1732147124876-669f11fecd14?w=800&q=75" alt="Pareja en la naturaleza"/>
+    </div>
+    <div class="scnt">
+      <span class="stag">Nuestra historia</span>
+      <h2>Cuando el amor encontró su camino</h2>
+      <p>Cada historia de amor es única, pero la nuestra está escrita en el corazón de Dios. Desde el primer instante supimos que este camino estaba destinado a recorrerse juntos, con fe, esperanza y mucho amor.</p>
+    </div>
+  </div>
+  <div class="split rev">
+    <div class="scnt">
+      <span class="stag">Nuestro compromiso</span>
+      <h2>Un pacto ante Dios y los nuestros</h2>
+      <p>Ante el altar, en presencia de nuestros seres queridos, haremos la promesa más sagrada de nuestras vidas. Cada detalle ha sido pensado con amor para que sea tan especial como el amor que nos une.</p>
+    </div>
+    <div class="simg">
+      <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=800&q=75" alt="Anillos y flores"/>
+    </div>
+  </div>
+
+  <!-- DETALLES -->
+  <section class="details" id="detalles">
+    <div class="section-hd">
+      <span class="tag">El gran día</span>
+      <h2>Detalles de la celebración</h2>
+    </div>
+    <div class="d-grid">
+      <article class="dcard rev">
+        <div class="dcard__img">
+          <img src="https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?w=500&q=75" alt="Iglesia"/>
+        </div>
+        <div class="dcard__body">
+          <h3>⛪ Ceremonia Religiosa</h3>
+          <p><strong>Parroquia de San Sebastian</strong><br/>Calle de la Fe 123, Centro Histórico<br/>Querétaro, Qro.<br/><br/><strong>17:00 hrs.</strong></p>
+        </div>
+      </article>
+      <article class="dcard rev">
+        <div class="dcard__img">
+          <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=500&q=75" alt="Recepción"/>
+        </div>
+        <div class="dcard__body">
+          <h3>🥂 Recepción & Cena</h3>
+          <p><strong>Salon La Victoria</strong><br/>Carretera Qro–San Juan km 4.5<br/><br/><strong>19:30 hrs.</strong><br/>Cena de gala y baile</p>
+        </div>
+      </article>
+      <!--<article class="dcard rev">
+        <div class="dcard__img">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=500&q=75" alt="Vestimenta"/>
+        </div>
+        <div class="dcard__body">
+          <h3>👔 Código de Vestimenta</h3>
+          <p><strong>Formal Elegante</strong><br/><br/>Evitar blanco, crema o tonos similares para las damas.<br/><br/><em>¡Luce espectacular!</em></p>
+        </div>
+      </article>
+      <article class="dcard rev">
+        <div class="dcard__img">
+          <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&q=75" alt="Mesa de regalos"/>
+        </div>
+        <div class="dcard__body">
+          <h3>🎁 Mesa de Regalos</h3>
+          <p><strong>Liverpool</strong> – Evento #982345<br/><strong>El Palacio de Hierro</strong> – Evento #AL-2026<br/><br/>O contribución a nuestro<br/><strong>fondo de luna de miel 🌴</strong></p>
+        </div>
+      </article>-->
+    </div>
+  </section>
+
+  <!-- FAMILIAS Y PADRINOS -->
+  <section class="families" id="familias">
+    <div class="families__bg" aria-hidden="true"></div>
+    <div class="families__overlay" aria-hidden="true"></div>
+    <div class="families__inner">
+      <div class="section-hd rev">
+        <span class="tag" style="color:var(--gold-lt)">Quienes los acompañan</span>
+        <h2>Nuestras Familias</h2>
+      </div>
+      <div class="fam-cols">
+        <div class="fam-card rev">
+          <div class="fam-card__badge">🌸 Novia</div>
+          <div class="fam-card__name">Familia Bocanegra Ugalde</div>
+          <hr/>
+          <ul>
+            <li><span class="role">Papá de la novia</span>Vicente Bocanegra Hernandez</li>
+            <li><span class="role">Mamá de la novia</span>Maria Pureza Ugalde Roque</li>
+          </ul>
+        </div>
+        <div class="fam-card rev">
+          <div class="fam-card__badge">🤵 Novio</div>
+          <div class="fam-card__name">Familia Santos Santos</div>
+          <hr/>
+          <ul>
+            <li><span class="role">Papá del novio</span>Agustin Santos Martinez</li>
+            <li><span class="role">Mamá del novio</span>Rosario Santos Martinez</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h3 class="godparents__title">
+          <span class="godparents__tag">Con gratitud especial</span>
+          Nuestros Padrinos
+        </h3>
+        <div class="gp-grid">
+          <div class="gp-card rev"><span class="cat">Arras</span><p class="names">Eduardo Salinas<br/>&amp; Mónica Torres</p><p class="couple">Padrinos de arras</p></div>
+          <div class="gp-card rev"><span class="cat">Ramo</span><p class="names">Fernando Díaz<br/>&amp; Claudia Reyes</p><p class="couple">Padrinos de ramo</p></div>
+          <div class="gp-card rev"><span class="cat">Lazo</span><p class="names">Héctor Mejía<br/>&amp; Valeria Núñez</p><p class="couple">Padrinos de lazo</p></div>
+          <div class="gp-card rev"><span class="cat">Anillos</span><p class="names">Rodrigo Sosa<br/>&amp; Daniela Flores</p><p class="couple">Padrinos de anillos</p></div>
+          <div class="gp-card rev"><span class="cat">Recepción</span><p class="names">Jorge Peña<br/>&amp; Carmen Ibáñez</p><p class="couple">Padrinos de recepción</p></div>
+          <div class="gp-card rev"><span class="cat">Música</span><p class="names">Andrés Castro<br/>&amp; Silvia Mora</p><p class="couple">Padrinos de música</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMA -->
+  <section class="program" id="programa">
+    <div class="section-hd">
+      <span class="tag">¿Qué viviremos?</span>
+      <h2>Programa del día</h2>
+    </div>
+    <nav class="tl" aria-label="Programa de la boda">
+      <div class="tl-item"><div class="tl-dot">🌿</div><div class="tl-text"><span class="tl-time">16:30</span><h4>Recepción de invitados</h4><p>Bienvenida en el atrio de la parroquia.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">✝</div><div class="tl-text"><span class="tl-time">17:00</span><h4>Ceremonia religiosa</h4><p>Santa Misa de matrimonio — silencia tu celular.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">📸</div><div class="tl-text"><span class="tl-time">18:30</span><h4>Sesión de fotos</h4><p>Jardines exteriores de la parroquia.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">🥂</div><div class="tl-text"><span class="tl-time">19:30</span><h4>Cóctel de bienvenida</h4><p>Hacienda Los Arcos — aperitivos y música en vivo.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">🍽️</div><div class="tl-text"><span class="tl-time">20:30</span><h4>Cena de gala &amp; brindis</h4><p>Menú especial y palabras de los novios.</p></div></div>
+      <div class="tl-item"><div class="tl-dot">💃</div><div class="tl-text"><span class="tl-time">22:00</span><h4>¡A bailar!</h4><p>DJ en vivo, vals de los novios y fiesta toda la noche.</p></div></div>
+    </nav>
+  </section>
+
+  <!-- UBICACIONES -->
+  <section class="locations" id="ubicacion">
+    <div class="section-hd rev">
+      <span class="tag">¿Cómo llegar?</span>
+      <h2>Nuestras ubicaciones</h2>
+    </div>
+    <div class="loc-grid">
+      <a href="https://maps.google.com/?q=Parroquia+San+Pedro+Apostol+Queretaro" target="_blank" rel="noopener" class="loc-card rev">
+        <div class="loc-card__img">
+          <img src="https://images.unsplash.com/photo-1548625149-720834a7d527?w=500&q=70" alt="Iglesia"/>
+        </div>
+        <div class="loc-card__body">
+          <div>
+            <h3>Parroquia</h3>
+            <p>Calle de la Fe 123<br/>Centro Histórico<br/>Querétaro, Qro.</p>
+          </div>
+          <span class="loc-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Abrir en Maps
+          </span>
+        </div>
+      </a>
+      <a href="https://maps.google.com/?q=Hacienda+Los+Arcos+Queretaro" target="_blank" rel="noopener" class="loc-card rev">
+        <div class="loc-card__img">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=500&q=70" alt="Hacienda"/>
+        </div>
+        <div class="loc-card__body">
+          <div>
+            <h3>Hacienda Los Arcos</h3>
+            <p>Carretera Qro–San Juan km 4.5<br/>Querétaro, Qro.</p>
+          </div>
+          <span class="loc-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Abrir en Maps
+          </span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+<!--  <section class="rsvp" id="rsvp">
+    <div class="rsvp__bg" aria-hidden="true"></div>
+    <div class="rsvp__overlay" aria-hidden="true"></div>
+    <div class="rsvp__inner">
+      <span class="stag">¿Nos acompañas?</span>
+      <h2>Confirma tu asistencia</h2>
+      <p>Por favor confírmanos antes del <strong style="color:var(--gold-lt)">31 de enero de 2026</strong> para preparar todo con el amor que mereces.</p>
+      <div class="rsvp__actions">
+        <a href="https://wa.me/5214421234567?text=¡Confirmo%20mi%20asistencia!%20🎉" target="_blank" rel="noopener" class="btn btn-gold">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Confirmar por WhatsApp
+        </a>
+        <a href="/cdn-cgi/l/email-protection#4a28252e2b0a39252c232b672b262f202b242e38256429252775393f28202f293e770925242c233827256f787a2b3923393e2f2429232b" class="btn btn-out">✉ Por correo</a>
+      </div>
+    </div>
+  </section>-->
+
+  <footer>
+    <span class="footer__script">Alejandra Paola &amp; Alexis</span>
+    <div class="footer__div"></div>
+    <p class="footer__info">11 · Julio · 2026 &nbsp;·&nbsp; Querétaro, México<br/>Hecho con amor para este día especial ♥</p>
+  </footer>
+
+</div><!-- /#main -->
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
